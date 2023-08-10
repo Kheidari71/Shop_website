@@ -619,10 +619,10 @@ legend {
 
 }
 
-.wd {
-    margin-top: 10px;
-    width: 5vw;
-
+.fa-brands{
+    padding: 3px;
+    color: white;
+    font-size: 20px;
 }
 
 #fo {
@@ -1011,7 +1011,7 @@ legend {
     
     height: 500px;
     background-image: url(/css/asset/pregnant.jpeg);
-    background-position: ;
+  
 }
 
     #hero {
@@ -1330,11 +1330,10 @@ legend {
         justify-content: center;
     }
 
-    .wd {
-        margin-top: 10px;
-        width: 3vw;
-        height: 3vw;
-
+    .fa-brands{
+        padding: 3px;
+        color: white;
+        font-size: 20px;
     }
 
     #fo {
