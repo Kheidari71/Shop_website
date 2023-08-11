@@ -91,6 +91,7 @@ toggle.addEventListener("click", toggleMenu, false);
           }
            
           /* Event Listeners */
+          const items = document.querySelectorAll(".item");
           for (let item of items) {
               if (item.querySelector(".submenu")) {
                 item.addEventListener("click", toggleItem, false);
