@@ -647,9 +647,7 @@ legend {
 .fa-brands{
     color: white;
 }
-.menu-active .item {
-    display: block;
-}
+
 /* Tablet menu */
 @media all and (min-width: 700px) {
     .menu {
@@ -746,7 +744,7 @@ legend {
     }
 
     #eleven {
-        height: 400px;
+        height: 330px;
     }
 
     #ttt {
