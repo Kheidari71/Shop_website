@@ -155,7 +155,7 @@ a {
 
 #ttt {
     margin: 2px;
-    width: 7vw;
+    width: 9vw;
     transform: translateX(-6%);
 }
 
@@ -198,7 +198,7 @@ a {
 .toggle {
     order: 1;
     font-size: 34px;
-
+z-index: 1000;
 }
 
 .item.button {
@@ -283,7 +283,7 @@ a {
 
 #herosec {
     width: 100%;
-    height: 500px;
+    
     background-image: url(/css/asset/pregnant.jpeg);
     background-size: cover;
     display: flex;
@@ -644,7 +644,12 @@ legend {
 #spp {
     width: 80vw;
 }
-
+.fa-brands{
+    color: white;
+}
+.menu-active .item {
+    display: block;
+}
 /* Tablet menu */
 @media all and (min-width: 700px) {
     .menu {
@@ -666,6 +671,7 @@ legend {
         flex: 1;
         text-align: right;
         order: 2;
+        z-index: 1000;
     }
 
     /* Button up from tablet screen */
@@ -758,7 +764,7 @@ legend {
         width: 100%;
         background-size: cover;
         background-position: left top;
-        height: 400px;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -766,7 +772,7 @@ legend {
     }
 
     #eleven {
-        height: 450px;
+        height: 350px;
     }
 }
 
@@ -1009,7 +1015,7 @@ legend {
 
  #herosec {
     
-    height: 500px;
+   
     background-image: url(/css/asset/pregnant.jpeg);
   
 }
