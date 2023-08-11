@@ -33,55 +33,50 @@ function _doStuff (e) {
 
 //Show hamburger menu on Mobile version under 650 width and hide it in more than 769 width
 
+const nav1 = document.querySelector("#hide");
+const ooo = document.getElementById("hidee");
 
-//Show sliver nav menu on Mobile version under 650 width and hide it in more than 650 width
-     let nav1 = document.getElementById("hide");
-     let ooo = document.getElementById("hidee");
-     console.log(nav1);
+console.log(nav1);
+console.log(ooo);
 
-     window.addEventListener("resize", _Width);
-function _Width() {
-     
-         if(window.innerWidth <= 651) {
-             nav1.style.display = "block";
-         }else{
-             nav1.style.display ="none";
-         }
-     }
-console.log(ooo)
-//Show shipping nav menu on Mobile version under 650 width and hide it in more than 650 width
-     window.addEventListener("resize", _Widthc);
-     function _Widthc() {
-          
-              if(window.innerWidth <= 651) {
-                  ooo.style.display = "block";
-              }else{
-                  ooo.style.display ="none";
-              }
-          }
+window.addEventListener("resize", toggleMenuVisibility);
 
-          const toggle = document.querySelector(".toggle");
-          const menu = document.querySelector(".menu");
-           
-          /* Toggle mobile menu */
-          function toggleMenu() {
-              if (menu.classList.contains("active")) {
-                  menu.classList.remove("active");
-                   
-                  // adds the menu (hamburger) icon
-                  toggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
-              } else {
-                  menu.classList.add("active");
-                   
-                  // adds the close (x) icon
-                  toggle.querySelector("a").innerHTML = "<i class='fa-solid fa-xmark'></i>";
-              }
-          }
-           
-          /* Event Listener */
-          toggle.addEventListener("click", toggleMenu, false);
+function toggleMenuVisibility() {
+    if (window.innerWidth <= 651) {
+        document.querySelector(".menu").classList.add("menu-active");
+        nav1.style.display = "block";
+    } else {
+        document.querySelector(".menu").classList.remove("menu-active");
+        nav1.style.display = "none";
+    }
+}
 
-          const items = document.querySelectorAll(".item");
+window.addEventListener("resize", toggleSubMenuVisibility);
+
+function toggleSubMenuVisibility() {
+    if (window.innerWidth <= 651) {
+        ooo.style.display = "block";
+    } else {
+        ooo.style.display = "none";
+    }
+}
+
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+
+/* Toggle mobile menu */
+function toggleMenu() {
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        toggle.querySelector("a").innerHTML = '<i class="fas fa-bars"></i>';
+    } else {
+        menu.classList.add("active");
+        toggle.querySelector("a").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    }
+}
+
+/* Event Listener */
+toggle.addEventListener("click", toggleMenu, false);
  
           /* Activate Submenu */
           function toggleItem() {
